@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/mintbean-weather/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/mintbean-weather/static/js/main.4b4bf98c.chunk.js",
+    "main.js.map": "/mintbean-weather/static/js/main.4b4bf98c.chunk.js.map",
+    "runtime-main.js": "/mintbean-weather/static/js/runtime-main.a0963937.js",
+    "runtime-main.js.map": "/mintbean-weather/static/js/runtime-main.a0963937.js.map",
+    "static/js/2.b3d146c6.chunk.js": "/mintbean-weather/static/js/2.b3d146c6.chunk.js",
+    "static/js/2.b3d146c6.chunk.js.map": "/mintbean-weather/static/js/2.b3d146c6.chunk.js.map",
+    "index.html": "/mintbean-weather/index.html",
+    "precache-manifest.aacca358e58b909f46346aa7ac51ef98.js": "/mintbean-weather/precache-manifest.aacca358e58b909f46346aa7ac51ef98.js",
+    "service-worker.js": "/mintbean-weather/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/mintbean-weather/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.b3d146c6.chunk.js.LICENSE.txt": "/mintbean-weather/static/js/2.b3d146c6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a0963937.js",
+    "static/js/2.b3d146c6.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.4b4bf98c.chunk.js"
+  ]
+}
