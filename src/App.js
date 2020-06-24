@@ -16,7 +16,6 @@ const GlobalStyle = createGlobalStyle`
     flex-direction: column;
     box-sizing: border-box;
     
-    
   }
 
   body::after {
@@ -33,6 +32,9 @@ const GlobalStyle = createGlobalStyle`
   z-index: -1;      
 }
 `;
+const filterForcast = (arr) => {
+  return arr[0]["dt_txt"];
+};
 
 function App() {
   const [state, setState] = useState({
@@ -53,12 +55,19 @@ function App() {
   const token = process.env.REACT_APP_OPEN_WEATHER_API_KEY;
 
   const getWeather = async (text) => {
-    const res = await axios.get(
+    const current = await axios.get(
       `http://api.openweathermap.org/data/2.5/weather?q=${searchBox}&units=metric&appid=${token}`
     );
-    console.log(res);
 
-    return res;
+    return current;
+  };
+
+  const getForcast = async (text) => {
+    const forcast = await axios.get(
+      `http://api.openweathermap.org/data/2.5/forecast?q=${searchBox}&units=metric&appid=${token}`
+    );
+
+    return forcast;
   };
 
   const search = useCallback(async (text) => {
@@ -66,8 +75,10 @@ function App() {
       ...prevState,
       loading: true,
     }));
-
-    const weatherData = await getWeather(text);
+    let [weatherData, forcastResult] = await Promise.all([
+      getWeather(text),
+      getForcast(text),
+    ]);
 
     setState((prevState) => ({
       ...prevState,
@@ -82,6 +93,8 @@ function App() {
       },
     }));
 
+    console.log(filterForcast(forcastResult.data.list));
+
     setTimeout(function () {
       setState((prevState) => ({
         ...prevState,
@@ -92,6 +105,7 @@ function App() {
 
   useEffect(() => {
     search(searchBox);
+
     // eslint-disable-next-line
   }, []);
 
