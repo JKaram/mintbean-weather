@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import axios from "axios";
 import jpc from "./ori_3488361_442578d19f292a7e23ef9c56e5afe4291487d5e3_vector-clouds-weather-seamless-pattern.jpg";
@@ -33,7 +33,15 @@ const GlobalStyle = createGlobalStyle`
 }
 `;
 const filterForcast = (arr) => {
-  return arr[0]["dt_txt"];
+  let currentDay = arr[0]["dt_txt"].slice(8, 10);
+  const days = [];
+  for (let item of arr) {
+    if (item.dt_txt.slice(8, 10) !== currentDay) {
+      days.push(item);
+      currentDay = item.dt_txt.slice(8, 10);
+    }
+  }
+  return days;
 };
 
 function App() {
@@ -50,6 +58,7 @@ function App() {
       description: null,
       icon: null,
     },
+    forcast: null,
   });
   const [searchBox, setSearchBox] = useState("Toronto");
   const token = process.env.REACT_APP_OPEN_WEATHER_API_KEY;
@@ -70,7 +79,7 @@ function App() {
     return forcast;
   };
 
-  const search = useCallback(async (text) => {
+  const search = async (text) => {
     setState((prevState) => ({
       ...prevState,
       loading: true,
@@ -93,7 +102,12 @@ function App() {
       },
     }));
 
-    console.log(filterForcast(forcastResult.data.list));
+    const citysForcast = filterForcast(forcastResult.data.list);
+
+    setState((prevState) => ({
+      ...prevState,
+      forcast: citysForcast,
+    }));
 
     setTimeout(function () {
       setState((prevState) => ({
@@ -101,14 +115,14 @@ function App() {
         loading: false,
       }));
     }, 2100);
-  });
+  };
 
   useEffect(() => {
     search(searchBox);
 
     // eslint-disable-next-line
   }, []);
-
+  console.log(state, "HERE");
   return (
     <div>
       <GlobalStyle />
