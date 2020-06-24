@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import axios from "axios";
 
+import { Loading } from "./components/Loading";
+import Results from "./components/Results";
+
 function App() {
   const [state, setState] = useState({
     loading: false,
@@ -65,9 +68,15 @@ function App() {
             onChange={(e) => setSearchBox(e.target.value)}
           />
         </label>
-        <button onClick={search}>What is the weather?</button>
       </form>
-      <div></div>
+      <button onClick={search}>What is the weather?</button>
+
+      <div>
+        {state.loading && <Loading />}
+        {state.name && (
+          <Results name={state.name} currentWeather={state.currentWeather} />
+        )}
+      </div>
     </div>
   );
 }
