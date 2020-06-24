@@ -6,28 +6,33 @@ export default function Results(props) {
 
   return (
     <Wrapper>
-      <City>{props.name}</City>
-      <Current>
-        <Icon
-          src={`http://openweathermap.org/img/wn/${props.currentWeather.icon}@2x.png`}
-          alt={props.currentWeather.description}
-        />
-        <Stat>{props.currentWeather.description}</Stat>
-        <div style={{ display: "flex", margin: "20px 0" }}>
-          <Stat>
-            <div>Temp</div>
-            <div>{Math.round(props.currentWeather.temp)}&#176;</div>
-          </Stat>
-          <Stat>
-            <div>Humidity</div>
-            <div>{props.currentWeather.humidity}%</div>
-          </Stat>
-          <Stat>
-            <div>Wind Speed</div>
-            <div>{props.currentWeather.windSpeed}</div>
-          </Stat>
-        </div>
-      </Current>
+      {!props.name && "Sorry Try Again"}
+      {props.name && (
+        <>
+          <City>{props.name}</City>
+          <Current>
+            <Icon
+              src={`http://openweathermap.org/img/wn/${props.currentWeather.icon}@2x.png`}
+              alt={props.currentWeather.description}
+            />
+            <Stat>{props.currentWeather.description}</Stat>
+            <div style={{ display: "flex", margin: "20px 0" }}>
+              <Stat>
+                <div>Temp</div>
+                <div>{Math.round(props.currentWeather.temp)}&#176;</div>
+              </Stat>
+              <Stat>
+                <div>Humidity</div>
+                <div>{props.currentWeather.humidity}%</div>
+              </Stat>
+              <Stat>
+                <div>Wind Speed</div>
+                <div>{props.currentWeather.windSpeed}</div>
+              </Stat>
+            </div>
+          </Current>
+        </>
+      )}
     </Wrapper>
   );
 }
@@ -35,7 +40,6 @@ export default function Results(props) {
 const Wrapper = styled.div`
   max-width: 800px;
   width: 100%;
-
   margin: 30px auto 0;
   background: #fff;
   -webkit-box-shadow: 0 8px 6px -6px black;

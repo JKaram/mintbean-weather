@@ -1,10 +1,10 @@
 import React from "react";
-import gif from "./Yg6P.gif";
+import gif from "./KH8F.gif";
 
 export const Loading = () => {
   return (
-    <>
-      <img src={gif} alt="loading" width="500" height="600" />
-    </>
+    <div style={{ textAlign: "center" }}>
+      <img src={gif} alt="loading" width="200" height="200" />
+    </div>
   );
 };
