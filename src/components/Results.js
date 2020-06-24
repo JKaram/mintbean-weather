@@ -17,7 +17,7 @@ export default function Results(props) {
         <div style={{ display: "flex", margin: "20px 0" }}>
           <Stat>
             <div>Temp</div>
-            <div>{Math.round(props.currentWeather.temp)}&#176;</div>
+            <div>{Math.round(props.currentWeather.temp)}&#8451;</div>
           </Stat>
           <Stat>
             <div>Humidity</div>
