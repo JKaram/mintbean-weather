@@ -65,7 +65,7 @@ function App() {
 
   const getWeather = async (text) => {
     const current = await axios.get(
-      `http://api.openweathermap.org/data/2.5/weather?q=${searchBox}&units=metric&appid=${token}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${searchBox}&units=metric&appid=${token}`
     );
 
     return current;
@@ -73,7 +73,7 @@ function App() {
 
   const getForcast = async (text) => {
     const forcast = await axios.get(
-      `http://api.openweathermap.org/data/2.5/forecast?q=${searchBox}&units=metric&appid=${token}`
+      `https://api.openweathermap.org/data/2.5/forecast?q=${searchBox}&units=metric&appid=${token}`
     );
 
     return forcast;
@@ -150,7 +150,11 @@ function App() {
       <div>
         {state.loading && <Loading />}
         {!state.loading && state.name && (
-          <Results name={state.name} currentWeather={state.currentWeather} />
+          <Results
+            name={state.name}
+            currentWeather={state.currentWeather}
+            forcast={state.forcast}
+          />
         )}
       </div>
     </div>
