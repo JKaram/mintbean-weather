@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/mintbean-weather/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/mintbean-weather/static/js/main.0f0e4983.chunk.js",
-    "main.js.map": "/mintbean-weather/static/js/main.0f0e4983.chunk.js.map",
+    "main.js": "/mintbean-weather/static/js/main.1e94e7a1.chunk.js",
+    "main.js.map": "/mintbean-weather/static/js/main.1e94e7a1.chunk.js.map",
     "runtime-main.js": "/mintbean-weather/static/js/runtime-main.a0963937.js",
     "runtime-main.js.map": "/mintbean-weather/static/js/runtime-main.a0963937.js.map",
-    "static/js/2.cd8b99e1.chunk.js": "/mintbean-weather/static/js/2.cd8b99e1.chunk.js",
-    "static/js/2.cd8b99e1.chunk.js.map": "/mintbean-weather/static/js/2.cd8b99e1.chunk.js.map",
+    "static/js/2.29cad61d.chunk.js": "/mintbean-weather/static/js/2.29cad61d.chunk.js",
+    "static/js/2.29cad61d.chunk.js.map": "/mintbean-weather/static/js/2.29cad61d.chunk.js.map",
     "index.html": "/mintbean-weather/index.html",
-    "precache-manifest.26b2158e33cce4b6d7fb81e42ba4c397.js": "/mintbean-weather/precache-manifest.26b2158e33cce4b6d7fb81e42ba4c397.js",
+    "precache-manifest.36fc71feb5d57deb2a9b17d7464bc754.js": "/mintbean-weather/precache-manifest.36fc71feb5d57deb2a9b17d7464bc754.js",
     "service-worker.js": "/mintbean-weather/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/mintbean-weather/static/css/main.5ecd60fb.chunk.css.map",
-    "static/js/2.cd8b99e1.chunk.js.LICENSE.txt": "/mintbean-weather/static/js/2.cd8b99e1.chunk.js.LICENSE.txt",
+    "static/js/2.29cad61d.chunk.js.LICENSE.txt": "/mintbean-weather/static/js/2.29cad61d.chunk.js.LICENSE.txt",
     "static/media/KH8F.gif": "/mintbean-weather/static/media/KH8F.e640a2d6.gif",
     "static/media/ori_3488361_442578d19f292a7e23ef9c56e5afe4291487d5e3_vector-clouds-weather-seamless-pattern.jpg": "/mintbean-weather/static/media/ori_3488361_442578d19f292a7e23ef9c56e5afe4291487d5e3_vector-clouds-weather-seamless-pattern.d7603347.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.a0963937.js",
-    "static/js/2.cd8b99e1.chunk.js",
+    "static/js/2.29cad61d.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.0f0e4983.chunk.js"
+    "static/js/main.1e94e7a1.chunk.js"
   ]
 }
