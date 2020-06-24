@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import moment from "moment";
 
 export default function Results(props) {
   console.log(props);
@@ -28,9 +29,37 @@ export default function Results(props) {
           </Stat>
         </div>
       </Current>
-      <div>
+      <City style={{ paddingBottom: "10px" }}>5 Day Forcast</City>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          paddingBottom: "30px",
+        }}
+      >
         {props.forcast.map((day) => {
-          return <div></div>;
+          var daysOfWeek = [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday",
+          ];
+
+          const date = moment(day["dt_txt"]);
+          const dow = date.day();
+
+          return (
+            <div key={day.dt}>
+              <Stat>
+                <div>{daysOfWeek[dow]}</div>
+
+                <div>{Math.round(day.main.temp)}&#176;</div>
+              </Stat>
+            </div>
+          );
         })}
       </div>
     </Wrapper>
