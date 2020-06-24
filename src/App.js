@@ -1,9 +1,21 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
+import { createGlobalStyle } from "styled-components";
 import axios from "axios";
 
 import { Loading } from "./components/Loading";
 import Results from "./components/Results";
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    background: #efefef;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+`;
 
 function App() {
   const [state, setState] = useState({
@@ -53,12 +65,16 @@ function App() {
         },
       }));
     }
-    return null;
+    return setState((prevState) => ({
+      ...prevState,
+      loading: false,
+    }));
   };
   console.log(state);
 
   return (
     <div>
+      <GlobalStyle />
       <form>
         <label>
           Name:
