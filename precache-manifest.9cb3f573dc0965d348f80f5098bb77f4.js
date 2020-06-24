@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e1d751a3b74fe541cc4b42f8c0e62f29",
+    "revision": "2c6fbf267b72f1e66e693ad87d2e41b6",
     "url": "/mintbean-weather/index.html"
   },
   {
-    "revision": "efa965777b3bfb160441",
+    "revision": "11d035e188b49bef0780",
     "url": "/mintbean-weather/static/css/main.5ecd60fb.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mintbean-weather/static/js/2.29cad61d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "efa965777b3bfb160441",
-    "url": "/mintbean-weather/static/js/main.1e94e7a1.chunk.js"
+    "revision": "11d035e188b49bef0780",
+    "url": "/mintbean-weather/static/js/main.53157f46.chunk.js"
   },
   {
     "revision": "a828fb7502ee34949c46",

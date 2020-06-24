@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/mintbean-weather/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/mintbean-weather/static/js/main.1e94e7a1.chunk.js",
-    "main.js.map": "/mintbean-weather/static/js/main.1e94e7a1.chunk.js.map",
+    "main.js": "/mintbean-weather/static/js/main.53157f46.chunk.js",
+    "main.js.map": "/mintbean-weather/static/js/main.53157f46.chunk.js.map",
     "runtime-main.js": "/mintbean-weather/static/js/runtime-main.a0963937.js",
     "runtime-main.js.map": "/mintbean-weather/static/js/runtime-main.a0963937.js.map",
     "static/js/2.29cad61d.chunk.js": "/mintbean-weather/static/js/2.29cad61d.chunk.js",
     "static/js/2.29cad61d.chunk.js.map": "/mintbean-weather/static/js/2.29cad61d.chunk.js.map",
     "index.html": "/mintbean-weather/index.html",
-    "precache-manifest.36fc71feb5d57deb2a9b17d7464bc754.js": "/mintbean-weather/precache-manifest.36fc71feb5d57deb2a9b17d7464bc754.js",
+    "precache-manifest.9cb3f573dc0965d348f80f5098bb77f4.js": "/mintbean-weather/precache-manifest.9cb3f573dc0965d348f80f5098bb77f4.js",
     "service-worker.js": "/mintbean-weather/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/mintbean-weather/static/css/main.5ecd60fb.chunk.css.map",
     "static/js/2.29cad61d.chunk.js.LICENSE.txt": "/mintbean-weather/static/js/2.29cad61d.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.a0963937.js",
     "static/js/2.29cad61d.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.1e94e7a1.chunk.js"
+    "static/js/main.53157f46.chunk.js"
   ]
 }
